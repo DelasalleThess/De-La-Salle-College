@@ -1,0 +1,26 @@
+#include <Servo.h>
+
+// Define the pin the servo is connected to
+int servoPin = 9;
+
+// Create a Servo object to control the servo
+Servo myServo;
+
+void setup() {
+  // Attach the servo to the pin
+  myServo.attach(servoPin);
+}
+
+void loop() {
+  // Move the servo to 180 degrees
+  myServo.write(91);
+ 
+  // Wait for 5 minutes (300,000 milliseconds)
+  delay(300000);
+ 
+  // Move the servo back to 0 degrees
+  myServo.write(120);
+ 
+  // Wait for 1 minute (60,000 milliseconds)
+  delay(60000);
+}
